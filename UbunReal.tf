@@ -61,7 +61,7 @@ resource "azurerm_linux_virtual_machine" "UbuntuVM" {
 //Aqui especificamos la clave publica SSH
 admin_ssh_key {
   username = "Samuel"
-  public_key = file("C:/Users/samuel/Desktop/Codigo terraform/Ubuntu Real/id_rsa.pub")
+  public_key = file("${path.module}/id_rsa.pub")
 }
   network_interface_ids = [
     azurerm_network_interface.UbuntInter.id,
