@@ -9,13 +9,6 @@ jobs:
   terraform:
     runs-on: ubuntu-latest
 
-    env:
-      ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
-      ARM_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
-      ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-      ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
-
-      
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -28,10 +21,7 @@ jobs:
       - name: Azure Login
         uses: azure/Login@v1
         with:
-          client-id: ${{ secrets.AZURE_CLIENT_ID }}
-          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-          client-secret: ${{ secrets.AZURE_CLIENT_SECRET }}
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
           
       - name: Retrieve SSH Key from Secrets
         run: echo "${{ secrets.SSH_PUBLIC_KEY }}" > id_rsa.pub
