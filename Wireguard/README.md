@@ -32,4 +32,4 @@ In this folder, the scripts used for Wireguard Automation are saved
 
  Esta seccion de la VPN de wireguard ya esta completa.
 
- This section the Wireguard is done.
+ This section the Wireguard VPN is done.
