@@ -1,15 +1,31 @@
-# Proyecto de practica propio: Creacion de servidor Jellyfin usando diferentes tecnologias.
+<h2 align="center">Proyecto de practica propio: Creacion de servidor Jellyfin usando diferentes tecnologias 🖥️</h2>
+**Este proyecto fue pensado para usar Jellyfin y poder montar una infrestructura tocando todo lo necesario de un perfil Devops como el mio,
+como estaba cansado de tener mis peliculas y series en mi disco duro decidi montar usando mis conocimientos y de paso tocando todo tipo de tecnologias y implementaciones
+un servidor en la nube usando Azure como herramienta principal, para asi yo poder ver series y peliculas cuando quiera y donde quiera.**
 
-1º: Creacion de archivo Terraform y añadiendolo al workflow.
+
+
+
+<p align="center">Indice de tecnologias usadas en mi proyecto</p>
+ 
+  - Terraform
+  
+  - Conexion de la Maquina Virtual
+    
+  - Wireguard
+
+
+
+## 1º: Creacion de archivo Terraform y añadiendolo al workflow.
 
   - Añadiendo el archivo de Terraform al workflow para el uso de Github Actions
   - Dentro del workflow, esta el deploy.yml necesario para el despliegue en Azure
 
-2º: Conexion de la maquina virtual.
+## 2º: Conexion de la maquina virtual.
 
   - ![image](https://github.com/user-attachments/assets/c881ca55-2b3c-41a0-bffc-fad9345569e8)
 
-3º: Wireguard
+## 3º: Wireguard
 
   El uso de la VPN, me ayudara a gestionar de mejor manera y aplicar una capa de seguridad mas sofisticada
   para mejorar la infraestructura. Ademas de añadir dicha VPN para que el tunel SSH de la maquina virtual sea
