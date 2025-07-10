@@ -17,9 +17,9 @@ Este proyecto fue pensado para usar **Jellyfin** y poder montar una infrestructu
 
   - Ansible🅰
 
-  - Docker
+  - Docker🖥️
 
-  - Jellyfin
+  - Jellyfin🐬
 
 
 
@@ -77,5 +77,9 @@ La conexion de la maquina virtual debido a la **VPN** esta solo se conectara si 
     ![image](https://github.com/user-attachments/assets/fda30bae-6d54-4df8-8e77-7e764bd08afc)
 
 ## 4º: Ansible🅰
+
+  **Ansible** es una poderosa herramienta para la automatizacion y despliegue general en el sector DevOps, ya que nos permite simplificar y agilizar la administracion de infraestructura. Funciona automatizando tareas cotidianas, desde la configuracion de servidores y la instalacion de software hasta el despliegue de aplicacion y la orquestacion de flujos de trabajo     complejos, elegi dicha herramiena porque es indispensable aprender a usarla y saber como funciona ya que como dije, es extremadamente util para la facilidad y automatizacion.
+
+***Ansible** is a powerful tool for automation and general deployment in the DevOps sector, as it allows us to simplify and streamline infraestructure management. It works by automating everyday tasks, from configuring servers and installing software to desploying applications and orchestrating complex workflows. I chose this tool because it is essential to learn      how to use it and know how it works since, as i said, it is extremely useful for ease and automation*
     
 
