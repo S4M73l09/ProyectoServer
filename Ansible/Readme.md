@@ -54,3 +54,4 @@ Para mas seguridad, Ansible usa un valor altamente confidencial llamado secreto,
 
 *For more security, Ansible uses a highly confidential value called secret, which once generated cannot be deleted and if we want to change it we must do so from the CLI or the Azure portal. To improve this, I wanted to add a rotation of Ansible secrets from my keyvault, all this information will be in a folder within this same section of Ansible*
 
+[Aqui esta dicho contenido/*Here is this content*](./Ansible-Secret_Automation/)
