@@ -1,4 +1,10 @@
-# En esta carpeta, se guarda los scripts usados para la automatizacion de wireguard/*In this folder, the scripts used for Wireguard Automation are saved*
+# Wireguard🌐
+
+Para una mejora de seguridad tanto para futuros proyectos como para aprender mas el uso y la importancia de las VPNs, he querido usar Wireguard para mejorar la seguridad del SSH y como modo de proteccion.
+
+*To improve security both for future projects and to learn more about the use and importance of VPNs, I wanted to use Wireguard to improve SSH security and as a protection mode*
+
+## En esta carpeta, se guarda los scripts usados para la automatizacion de wireguard/*In this folder, the scripts used for Wireguard Automation are saved*
 
 
 
