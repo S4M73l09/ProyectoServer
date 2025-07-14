@@ -1,0 +1,13 @@
+---
+- name: Test de conexion con Azure
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Listar grupo de recursos en Azure
+      azure_rm_resourcegroup_info:
+      register: resultado
+
+    - debug:
+        var: resultado
+
+
