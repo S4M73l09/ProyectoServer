@@ -2,7 +2,7 @@
 
 1. purgar-eliminacion-**purge-elimination**
 2. rotacion-secreto-**rotate-secret**
-3. script-principal-**principal-script**
+3. script-principal-**script-main**
 
 --------------------------------------------
 
