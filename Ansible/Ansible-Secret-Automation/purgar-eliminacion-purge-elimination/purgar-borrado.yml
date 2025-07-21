@@ -1,0 +1,65 @@
+---
+- name: Limpiar versiones antiguas y purgar secretos eliminados
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  tasks:
+    - name: Listar versiones del secreto
+      ansible.builtin.command: >
+        az keyvault secret list-versions
+        --vault-name {{ keyvault_name }}
+        --name {{ kv_secret_name }}
+        --query "[].{id:id, created:attributes.created}"
+        -o json
+      register: versions_raw
+      changed_when: false
+
+    - name: Parsear listado de versiones
+      set_fact:
+        secret_versions: "{{ versions_raw.stdout | from_json }}"
+
+    - name: Mostrar versiones encontradas
+      debug:
+        msg: "Versiones encontradas: {{ secret_versions | map(attribute='id') | list }}"
+
+    # --- BLOQUE ROBUSTO PARA NORMALIZAR FECHAS ---
+    - name: Inicializar lista limpia
+      set_fact:
+        versions_clean: []
+
+    - name: Normalizar fechas en lista (sin milisegundos)
+      set_fact:
+        versions_clean: "{{ versions_clean + [ { 'id': item.id, 'created': item.created | regex_replace('\\.\\d+Z?$', '') } ] }}"
+      loop: "{{ secret_versions }}"
+
+    - name: Mostrar versiones limpias
+      debug:
+        msg: "Limpio: {{ versions_clean }}"
+
+    - name: Convertir fechas de creación a timestamps UNIX
+      ansible.builtin.command: "date -d '{{ item.created }}' +%s"
+      register: timestamp_results
+      loop: "{{ versions_clean }}"
+      changed_when: false
+
+    # Fusionar IDs, fechas y timestamps (modo universal)
+    - name: Inicializar lista fusionada
+      set_fact:
+        versions_with_timestamps: []
+
+    - name: Fusionar datos por índice
+      vars:
+        ids: "{{ versions_clean | map(attribute='id') | list }}"
+        fechas: "{{ versions_clean | map(attribute='created') | list }}"
+        stamps: "{{ timestamp_results.results | map(attribute='stdout') | map('int') | list }}"
+      set_fact:
+        versions_with_timestamps: "{{ versions_with_timestamps + [ { 'id': ids[idx], 'created': fechas[idx], 'timestamp': stamps[idx] } ] }}"
+      loop: "{{ range(0, ids | length) | list }}"
+      loop_control:
+        index_var: idx
+
+    - name: Mostrar versiones con timestamps
+      debug:
+
+
