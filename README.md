@@ -4,7 +4,9 @@ Este proyecto fue pensado para usar **Jellyfin** y poder montar una infrestructu
 
 *This project was deigned to use **Jellyfin** and be able to set up an infraestructure by touching everything necessary from a **Devops** profile like mine, since I was tired of having my movies and series on my hard drive I decided to set up using my knowledge and incidentally touching all kinds of **technologies** and implementations a cloud server using **Azure** as the main tool, so I can watch series and movies whenever and wherever I want.*
 
+**Atencion ⚠️ Este codigo utiliza infraestuctura y credenciales personales, se puede clonar el repositorio pero la creacion de secrets y credenciales personales debes añadirlo tu, nunca subas tus credenciales a tu repositorio por seguridad**
 
+***Atention ⚠️ This code uses infrastructure and personal credentials, you can clone the repository but you must add the creation of secrets and personal credentials, never upload your credentials to your repository for security***
 <p align="center">Indice de tecnologias usadas en mi proyecto/Index of technologies used in my project</p>
 
   - Github Actions🔥
