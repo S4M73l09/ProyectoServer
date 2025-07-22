@@ -22,3 +22,35 @@ He separado cada script en tres diferentes carpetas para asi poder explicar de m
 - **This file is responsible for giving the necessary variables to the SP-rotator that is responsible for transferring secrets to Ansible, while at the same time it helps us to better improve security since it allows us not to put important variables in our Scripts. For security reasons, here in Git Hub the variables used are censored and other random ones were placed this is just an example of such a file.**
 
   -----------------------------------------------------------------------------
+
+
+
+
+  
+---
+
+### **¿Cómo se verá?/*How will it look?***
+¡Así! 👇 *so 👇*
+
+
+```mermaid
+flowchart TD
+    %% Estilos de nodos
+    classDef env fill:#e0f7fa,stroke:#0097a7,stroke-width:2px,color:#006064;
+    classDef script fill:#fff9c4,stroke:#fbc02d,stroke-width:2px,color:#f57c00;
+    classDef playbook1 fill:#e1bee7,stroke:#8e24aa,stroke-width:2px,color:#4a148c;
+    classDef playbook2 fill:#ffe0b2,stroke:#f57c00,stroke-width:2px,color:#bf360c;
+
+    %% Nodos
+    A["<b>Archivo .env<br/>(SP)</b>"]:::env
+    B["<b>Script Bash</b><br/>(rotate-and-run2.sh)"]:::script
+    C1["<b>Playbook 1</b><br/>Rotar secreto<br/>(rotate-ansible-secret2.yml)"]:::playbook1
+    C2["<b>Playbook 2</b><br/>Limpiar/purgar<br/>versiones antiguas<br/>(purgar-borrado.yml)"]:::playbook2
+
+    %% Flujo
+    A --> B
+    B --> C1
+    B --> C2
+
+
+
