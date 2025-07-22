@@ -1,6 +1,6 @@
 //Provider Azure
 provider "azurerm" {
-  subscription_id = "2a23dc3f-267e-4cd1-a12a-695e2623f1f7" 
+  subscription_id = var.subscription_id 
   features {}
 }
 //Creacion del grupo de recursos
