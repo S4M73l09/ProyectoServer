@@ -24,7 +24,12 @@ jobs:
         uses: azure/Login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
+
           
+      #2. Crear archivo de variables con el secret de la suscripcion 
+      - name: Crear archivo de variables para terraform
+        run: echo 'subscription_id = "${{ secrets.AZURE_SUBSCRIPTION_ID }}" ' > ubuntu-terraform.tfvars
+      
       - name: Retrieve SSH Key from Secrets
         run: echo "${{ secrets.SSH_PUBLIC_KEY }}" > id_rsa.pub
 
@@ -32,7 +37,7 @@ jobs:
         run: terraform init
 
       - name: Plan Terraform
-        run: terraform plan -out=tfplan
+        run: terraform plan -var-file="ubuntu-terraform.tfvars" -out=tfplan
 
       - name: Apply Terraform
         run: terraform apply -auto-approve tfplan
