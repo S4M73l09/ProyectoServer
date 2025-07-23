@@ -7,6 +7,12 @@ Este proyecto fue pensado para usar **Jellyfin** y poder montar una infrestructu
 **Atencion ⚠️ Este codigo utiliza infraestuctura y credenciales personales, se puede clonar el repositorio pero la creacion de secrets y credenciales personales debes añadirlo tu, nunca subas tus credenciales a tu repositorio por seguridad**
 
 ***Atention ⚠️ This code uses infrastructure and personal credentials, you can clone the repository but you must add the creation of secrets and personal credentials, never upload your credentials to your repository for security***
+
+**Archivos de ejemplo puestos directamente en una carpeta especial, tanto archivo de terraform como archivos de configuracion de Ansible y wireguard**
+
+***Example files placed directly in a special folder, both terraform file and Ansible and wireguard configuration files***
+
+
 <p align="center">Indice de tecnologias usadas en mi proyecto/Index of technologies used in my project</p>
 
   - Github Actions🔥
