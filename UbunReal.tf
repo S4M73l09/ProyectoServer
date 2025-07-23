@@ -30,13 +30,6 @@ resource "azurerm_subnet" "UbuntuREALS" {
   virtual_network_name = azurerm_virtual_network.UbuntuREAL.name
   address_prefixes     = ["10.0.1.0/24"]
 }
-//Creacion de la Ippublica
-resource "azurerm_public_ip" "UbuntuIPREAL_" {
-  name = "UbuntuIPREAL_public_ip"
-  location = azurerm_resource_group.UbuntuReal.location
-  resource_group_name = azurerm_resource_group.UbuntuReal.name
-  allocation_method = "Static"
-}
 //Creacion y configuracion de la interfaz de red
 resource "azurerm_network_interface" "UbuntInter" {
   name                = "UbuntInter-nic"
