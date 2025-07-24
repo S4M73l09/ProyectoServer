@@ -1,0 +1,44 @@
+name: Deploy Ubuntu Server with Terraform
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '**.tf'
+      - '**/terraform.*'
+jobs:
+  terraform:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v2
+        with:
+          terraform_version: 1.4.6
+      #1. Autenticacion de Azure / Azure authentication 
+      - name: Azure Login
+        uses: azure/Login@v1
+        with:
+          creds: ${{ secrets.<name_secret_github> }}
+
+          
+      #2. Crear archivo de variables con el secret de la suscripcion / Create variable file with the subscription secret
+      - name: Crear archivo de variables para terraform
+        run: echo 'subscription_id = "${{ secrets.AZURE_SUBSCRIPTION_ID }}" ' > <name_variable_subscription>.tfvars
+      
+      #3. Clave SSH en el secrets de GitHub / SSH key in GitHub secrets
+      - name: Retrieve SSH Key from Secrets
+        run: echo "${{ secrets.SSH_PUBLIC_KEY }}" > id_rsa.pub
+
+      - name: Initialize Terraform
+        run: terraform init
+
+      - name: Plan Terraform
+        run: terraform plan -var-file="ubuntu-terraform.tfvars" -out=tfplan
+
+      - name: Apply Terraform
+        run: terraform apply -auto-approve tfplan
