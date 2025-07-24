@@ -1,3 +1,9 @@
+//Variable
+variable "subscription_id" {
+  description = "Azure Subscription ID"
+  type        = string
+}
+
 //Provider Azure
 provider "azurerm" {
   subscription_id = var.subscription_id 
