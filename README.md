@@ -17,7 +17,7 @@ Este proyecto fue pensado para usar **Jellyfin** y poder montar una infrestructu
 
   - Github Actions[🔥](.github./workflows)
   
-  - Terraform[🗿](.UbunReal.tf)
+  - Terraform[🗿](./UbunReal.tf)
 
   - Conexion a la mquina virtual / *Connection the virtual machine*🛜
 
