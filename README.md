@@ -28,9 +28,10 @@ Este proyecto fue pensado para usar **Jellyfin** y poder montar una infrestructu
   - Docker🖥️
 
   - Jellyfin🐬
+----------------------------------------
 
-
-
+### Carpetas y plantillas para que puedas hacer tu propio servidor. / *Folders and templates so you can make your own server.*[📁](./Example-plantillas)
+------------------------------------------------
 ## 1º: Creacion de archivo Terraform y añadiendolo al workflow / *Creation archive terraform and add the workflow*🗿
 
   - Añadiendo el archivo de **Terraform** al workflow para el uso de Github Actions.
