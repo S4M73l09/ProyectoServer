@@ -15,7 +15,7 @@ Este proyecto fue pensado para usar **Jellyfin** y poder montar una infrestructu
 
 <p align="center">Indice de tecnologias usadas en mi proyecto/Index of technologies used in my project</p>
 
-  - Github Actions[🔥](./.github./workflows/)
+  - Github Actions[🔥](./.github./workflows/terraform1.yml)
   
   - Terraform[🗿](./UbunReal.tf)
 
