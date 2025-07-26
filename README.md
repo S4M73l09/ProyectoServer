@@ -15,15 +15,15 @@ Este proyecto fue pensado para usar **Jellyfin** y poder montar una infrestructu
 
 <p align="center">Indice de tecnologias usadas en mi proyecto/Index of technologies used in my project</p>
 
-  - Github Actions🔥
+  - Github Actions[🔥](.github./workflows)
   
-  - Terraform🗿
-    
-  - Conexion de la maquina Virtual🛜
+  - Terraform[🗿](.UbunReal.tf)
 
-  - Wireguard🌐
+  - Conexion a la mquina virtual / *Connection the virtual machine*🛜
 
-  - Ansible🅰
+  - Wireguard[🌐](./Wireguard)
+
+  - Ansible[🅰](./Ansible)
 
   - Docker🖥️
 
@@ -31,7 +31,7 @@ Este proyecto fue pensado para usar **Jellyfin** y poder montar una infrestructu
 
 
 
-## 1º: Creacion de archivo Terraform y añadiendolo al workflow/*Creation archive terraform and add the workflow*🗿
+## 1º: Creacion de archivo Terraform y añadiendolo al workflow / *Creation archive terraform and add the workflow*🗿
 
   - Añadiendo el archivo de **Terraform** al workflow para el uso de Github Actions.
 
@@ -40,7 +40,14 @@ Este proyecto fue pensado para usar **Jellyfin** y poder montar una infrestructu
     
     *Inside the workflow, its **desploy.yml** required for desployment in Azure*
 
-## 2º: Conexion de la maquina virtual/*Conection the virtual machine*🛜
+
+## Github Actions🔥
+
+Este apartado lo puedes ver en la documentacion explicado correctamente, tambien puedes verlo en el workflow para que puedas ver como esta relacionado aparte de tener una carpeta con las plantillas para quien quiera hacerlo.
+
+*You can see this section in the documentation explained correctly, you can also see it in the workflow so you can see how it is related apart from having a folder with the templates for whoever wants to do it.*
+
+## 2º: Conexion de la maquina virtual / *Conection the virtual machine*🛜
 
 La conexion de la maquina virtual debido a la **VPN** esta solo se conectara si tenemos activo wireguard en nuestro cliente, asi lo tenemos asegurado, este punto se vera reforzado en el siguiente apartado.
 
