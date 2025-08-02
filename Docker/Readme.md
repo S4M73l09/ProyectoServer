@@ -57,4 +57,19 @@ Y este es el docker-compose, debio a que este comando en general varia en realid
 
 <img width="808" height="742" alt="image" src="https://github.com/user-attachments/assets/de2a806e-5e80-4a9c-b30b-758f7d8fc722" />
 
+--------------------------------------------------
+
+## prometheus.yml
+
+Este .yml es necesario para el docker-compose, archivo almacenado en una carpeta dentro del apartado de Docker para mayor visibilidad de los demas .yml
+
+*This.yml is necessary for the docker-compose, a file stored in a folder within the Docker section for greater visibility of the other.yml*
+
+<img width="302" height="171" alt="image" src="https://github.com/user-attachments/assets/b30a05a5-5430-4e29-8813-0ce5b7fd5a84" />
+
+--------------------------------------------------------------------
+
+
+
+
 
