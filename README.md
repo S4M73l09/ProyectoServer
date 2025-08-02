@@ -97,5 +97,10 @@ La conexion de la maquina virtual debido a la **VPN** esta solo se conectara si 
   **Ansible** es una poderosa herramienta para la automatizacion y despliegue general en el sector DevOps, ya que nos permite simplificar y agilizar la administracion de infraestructura. Funciona automatizando tareas cotidianas, desde la configuracion de servidores y la instalacion de software hasta el despliegue de aplicacion y la orquestacion de flujos de trabajo     complejos, elegi dicha herramiena porque es indispensable aprender a usarla y saber como funciona ya que como dije, es extremadamente util para la facilidad y automatizacion.
 
 ***Ansible** is a powerful tool for automation and general deployment in the DevOps sector, as it allows us to simplify and streamline infraestructure management. It works by automating everyday tasks, from configuring servers and installing software to desploying applications and orchestrating complex workflows. I chose this tool because it is essential to learn      how to use it and know how it works since, as i said, it is extremely useful for ease and automation*
+
+## 5º: Docker🖥️
+ **Docker** es una plataforma de codigo abierto que permite crear, probar e implementar aplicaciones rapidamente. Esto se hace empaquetando software en unidades estandarizadas llamadas contenedores que incluyen todo lo necesario para que el software se ejecute, incluidas bibliotecas, herramientas de sistema, codigo y version ejecutable. Esto nos permite un mayor control y facilidad para crear infraestructuras y querer controlarlas de mejor manera.
+
+ ***Docker** is an open source platform that allows you to quickly build, test, and deploy applications. This is done by packaging software into standardized units called containers that include everything necessary for the software to run, including libraries, system tools, code, and executable version. This allows us greater control and ease to create infrastructures and want to control them in a better way.*
     
 
