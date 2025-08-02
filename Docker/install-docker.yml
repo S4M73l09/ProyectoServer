@@ -1,0 +1,44 @@
+---
+- name: Instalar Docker en Ubuntu / Install Docker
+  hosts: azure_host #Nombre del host
+  become: yes
+  tasks:
+    - name: Instalar paquetes necesarios
+      apt:
+        name:
+          - apt-transport-https
+          - ca-certificates
+          - curl
+          - software-properties-common
+        state: present
+        update_cache: yes
+
+    - name: Añadir clave GPG oficial de Docker
+      apt_key:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        state: present
+
+    - name: Añadir repositorios de Docker
+      apt_repository:
+        repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_distribution_release | trim }} stable"
+        state: present
+
+    - name: Instalar Docker Engine
+      apt:
+        name: docker-ce
+        state: latest
+        update_cache: yes
+
+    - name: Asegurar que el servicio Docker esta activo
+      service:
+        name: docker
+        state: started
+        enabled: yes
+
+    - name: Añadir el usuario actual al grupo docker (opcional)
+      user:
+        name: "{{ ansible_user }}"
+        groups: docker
+        append: yes
+   
+

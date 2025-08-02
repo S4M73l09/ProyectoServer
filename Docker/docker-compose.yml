@@ -1,0 +1,37 @@
+
+services:
+  jellyfin:
+    image: jellyfin/jellyfin
+    container_name: jellyfin
+    restart: unless-stopped
+    network_mode: host # Usa la red del host (incluye VPN)
+    volumes:
+      - ./jellyfin/config:/config
+      - ./jellyfin/cache:/cache
+      - /home/Samuel/videos:/media # ruta real en el servidor de series y peliculas
+    environment:
+      - PUID=1000
+      - PGID=1000
+
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+    restart: unless-stopped
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./grafana:/var/lib/grafana
+    environment:
+        GF_SECURITY_ADMIN_USER: ${GF_USER}
+        GF_SECURITY_ADMIN_PASSWORD: ${GF_PASS}

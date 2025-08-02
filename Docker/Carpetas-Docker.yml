@@ -1,0 +1,57 @@
+- name: Desplegar stack Docker
+  hosts: azure_host
+  become: yes
+  vars:
+    stack_path: /home/Samuel/docker
+  
+  tasks:
+    - name: Crear carpeta princpial del stack
+      file:
+        path: "{{ stack_path }}"
+        state: directory
+        mode: '0755'
+        owner: Samuel
+        group: Samuel
+
+    - name: Crear subcarpetas para volúmenes persistentes
+      file:
+        path: "{{ item }}"
+        state: directory
+        mode: '0755'
+        owner: Samuel
+        group: Samuel
+      loop:
+        - "{{ stack_path }}/grafana"
+        - "{{ stack_path }}/prometheus"
+        - "{{ stack_path }}/jellyfin"
+    
+    - name: Copiar docker-compose.yml al servidor
+      copy:
+        src: ./docker-compose.yml
+        dest: "{{ stack_path }}/docker-compose.yml"
+        owner: Samuel
+        group: Samuel
+        mode: '0644'
+    
+    
+    - name: Copiar archivo .env con credenciales de grafana
+      copy:
+        src: ./Grafana.env     #Archivo local
+        dest: "{{ stack_path }}/.env"  # asi lo reconocera docker-compose
+        owner: Samuel
+        group: Samuel
+        mode: '0600'
+    
+    
+    - name: Copiar prometheus.yml al servidor
+      copy:
+        src: prometheus/prometheus.yml
+        dest: "{{ stack_path }}/prometheus/prometheus.yml"
+        owner: Samuel
+        group: Samuel
+        mode: '0644'
+
+    - name: Ejecutar docker-compose
+      shell: docker compose up -d
+      args:
+        chdir: "{{ stack_path }}"
