@@ -55,7 +55,8 @@ Y este es el docker-compose, debio a que este comando en general varia en realid
 
 *And this is the docker-compose, because this command in general actually varies from what we want to install, it will not be put as such as a template, but as a sample of how it works.*
 
-<img width="808" height="742" alt="image" src="https://github.com/user-attachments/assets/de2a806e-5e80-4a9c-b30b-758f7d8fc722" />
+<img width="818" height="1279" alt="image" src="https://github.com/user-attachments/assets/fc705fb6-a1d9-498a-9551-d295e6678d3d" />
+
 
 --------------------------------------------------
 
@@ -65,7 +66,8 @@ Este .yml es necesario para el docker-compose, archivo almacenado en una carpeta
 
 *This.yml is necessary for the docker-compose, a file stored in a folder within the Docker section for greater visibility of the other.yml*
 
-<img width="302" height="171" alt="image" src="https://github.com/user-attachments/assets/b30a05a5-5430-4e29-8813-0ce5b7fd5a84" />
+<img width="409" height="344" alt="image" src="https://github.com/user-attachments/assets/16fdcee6-87b3-4f92-941e-80f41ac9cd96" />
+
 
 --------------------------------------------------------------------
 
