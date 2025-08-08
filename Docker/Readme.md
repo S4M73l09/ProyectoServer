@@ -68,6 +68,14 @@ Este .yml es necesario para el docker-compose, archivo almacenado en una carpeta
 
 <img width="409" height="344" alt="image" src="https://github.com/user-attachments/assets/16fdcee6-87b3-4f92-941e-80f41ac9cd96" />
 
+## Copy.yml
+
+Este .yml es un extra, y puede servir para copiar lo que queramos usando Ansible. Para ello siempre usamos **ansible-playbook -i hosts.ini Docker/<nombredelarchivoacopiar.yml>** Por supuesto, por motivos de seguridad, yo siempre separare en una carpeta los archivos Docker.
+
+This .yml is an extra, and can be used to copy whatever we want using Ansible. To do this we always use **ansible-playbook -i hosts.ini Docker/<filenamecopy.yml>** Of course, for security reasons, I will always separate the Docker files in a folder.
+
+<img width="1025" height="239" alt="image" src="https://github.com/user-attachments/assets/5febd7f9-dc38-4df2-a96a-9f2d11a18593" />
+
 
 --------------------------------------------------------------------
 
