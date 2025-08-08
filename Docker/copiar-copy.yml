@@ -1,0 +1,11 @@
+- name: Copiar video de prueba al servidor
+  hosts: azure_host # Nombre del host del archivo hosts.ini
+  become: yes
+  tasks:
+    - name: Copiar archivo de video
+      copy:
+        src: '/home/samuel/【2014】Fate_stay night unlimited blade works_ Archers Caladborg II.mp4' #Ruta de lo que queremos copiar
+        dest: /home/Samuel/videos/prueba.mp4 #Ruta donde se copiara
+        owner: Samuel
+        group: Samuel
+        mode: '0644'
