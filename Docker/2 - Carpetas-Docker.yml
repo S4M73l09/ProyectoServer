@@ -22,6 +22,7 @@
         group: Samuel
       loop:
         - "{{ stack_path }}/grafana"
+        - "{{ stack_path }}/grafana-conf"
         - "{{ stack_path }}/prometheus"
         - "{{ stack_path }}/jellyfin"
     
@@ -42,6 +43,13 @@
         group: Samuel
         mode: '0600'
     
+    - name: Copiar archivo custom.ini de Grafana
+      copy:
+        src: ./custom.ini #Archivo importante para desactivar el allow_sign_up de grafana y evitar problemas
+        dest: "{{ stack_path }}/grafana-conf/custom.ini"
+        owner: Samuel
+        group: Samuel
+        mode: '0644'
     
     - name: Copiar prometheus.yml al servidor
       copy:
