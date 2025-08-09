@@ -41,22 +41,24 @@ Este comando .yml se encargar de crear la estructura de carpetas, subcarpetas y 
 
 *This .yml command will be in charge of creating the structure of folders, subfolders and copying the docker-compose plus the prometheus.yml since it is necessary.*
 
-<img width="709" height="1101" alt="image" src="https://github.com/user-attachments/assets/10b4abcf-1aa2-4e63-b007-bcc6d9df3fa6" />
+<img width="858" height="1253" alt="image" src="https://github.com/user-attachments/assets/7486f65b-c38e-4b73-9853-a9b2cf736e78" />
 
-Este comando en particular como dije, copia el docker-compose, prometheus.yml que es necesario para prometheus y copia un archivo de variables usado para las credenciales de grafana a la hora de crear el docker-compose, aparte se encargar de ejecutar el docker-compose directamente.
 
-*This particular command, as I said, copies the docker-compose, prometheus.yml, which is necessary for prometheus, and copies a variable file used for the grafana credentials when creating the docker-compose, in addition to executing the docker. -compose directly.*
+Este comando en particular como dije, copia el docker-compose, prometheus.yml que es necesario para prometheus, copia un archivo de variables usado para las credenciales de grafana a la hora de crear el docker-compose, copiar un archivo de custom.ini para quitar la opcion de allow_sign_up para mas seguridad y aparte se encargar de ejecutar el docker-compose directamente.
+
+*This particular command, as I said, copies the docker-compose, prometheus.yml, which is necessary for prometheus, copies a variable file used for graphana credentials when creating the docker-compose, copies a custom.ini file to remove the allow_sign_up option for more security and also be in charge of executing the docker-compose directly.*
 
 -------------------------------------------------
 
 ## docker-compose.yml
 
-Y este es el docker-compose, debio a que este comando en general varia en realidad de lo que queramos instalar, este no se pondra como tal como plantilla, pero si como muestra de como funciona.
+Y este es el docker-compose, debio a que este comando en general varia en realidad de lo que queramos instalar, este se puede usar como plantilla, igualmente se muestra como funciona.
 
-*And this is the docker-compose, because this command in general actually varies from what we want to install, it will not be put as such as a template, but as a sample of how it works.*
+*And this is the docker-compose, because this command in general actually varies from what we want to install, it can be used as a template, it also shows how it works.*
 
-<img width="818" height="1279" alt="image" src="https://github.com/user-attachments/assets/fc705fb6-a1d9-498a-9551-d295e6678d3d" />
+<img width="1098" height="1116" alt="image" src="https://github.com/user-attachments/assets/f252189a-b3d6-40df-a5ac-2d9dd7b66a49" />
 
+<img width="375" height="658" alt="image" src="https://github.com/user-attachments/assets/1cd544f6-0df9-4d11-b46b-f8175beff19a" />
 
 --------------------------------------------------
 
@@ -76,6 +78,9 @@ This .yml is an extra, and can be used to copy whatever we want using Ansible. T
 
 <img width="1025" height="239" alt="image" src="https://github.com/user-attachments/assets/5febd7f9-dc38-4df2-a96a-9f2d11a18593" />
 
+## custom.ini
+
+Este archivo cuenta con una opcion para deshabilitar el allow_sign_up, ya que por defecto en grafana lo pone como true.
 
 --------------------------------------------------------------------
 
