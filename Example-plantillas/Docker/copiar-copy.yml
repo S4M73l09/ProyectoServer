@@ -1,0 +1,11 @@
+- name: Copiar video de prueba al servidor - Copy test video to server
+  hosts: azure_host # Nombre del host del archivo hosts.ini - Hostname of the hosts.ini file
+  become: yes
+  tasks:
+    - name: Copiar archivo - Copy file
+      copy:
+        src:  /home/NAME/archivo-file #Ruta de lo que queremos copiar
+        dest: /home/NAME/directorio-folder/archivo-file #Ruta donde se copiara
+        owner: USER-Usuario
+        group: USER-Usuario
+        mode: '0644'

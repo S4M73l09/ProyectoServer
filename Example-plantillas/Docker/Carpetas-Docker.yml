@@ -1,0 +1,65 @@
+- name: Desplegar stack Docker - Deploy stack Docker
+  hosts: Name-Nombre hosts.ini
+  become: yes
+  vars:
+    stack_path: /home/Directorio-Folder/docker
+  
+  tasks:
+    - name: Crear carpeta princpial del stack - Create main stack folder
+      file:
+        path: "{{ stack_path }}"
+        state: directory
+        mode: '0755'
+        owner: Samuel
+        group: Samuel
+
+    - name: Crear subcarpetas para volúmenes persistentes - Create subfolders for persistent volumes
+      file:
+        path: "{{ item }}"
+        state: directory
+        mode: '0755'
+        owner: Samuel
+        group: Samuel
+      loop:
+        - "{{ stack_path }}/grafana"
+        - "{{ stack_path }}/grafana-conf"
+        - "{{ stack_path }}/prometheus"
+        - "{{ stack_path }}/jellyfin"
+    
+    - name: Copiar docker-compose.yml al servidor - Copy docker-compose.yml to the server
+      copy:
+        src: ./docker-compose.yml
+        dest: "{{ stack_path }}/docker-compose.yml"
+        owner: Samuel
+        group: Samuel
+        mode: '0644'
+    
+    
+    - name: Copiar archivo .env con credenciales de grafana - Copy .env file with grafana credentials
+      copy:
+        src: ./Grafana.env     #Archivo local - Local file
+        dest: "{{ stack_path }}/.env"  # asi lo reconocera docker-compose - this is how docker-compose will recognize it
+        owner: Samuel
+        group: Samuel
+        mode: '0600'
+    
+    - name: Copiar archivo custom.ini de Grafana - Copy Grafana custom.ini file
+      copy:
+        src: ./custom.ini #Archivo importante para desactivar el allow_sign_up de grafana y evitar problemas - Important file to disable graphana allow_sign_up and avoid problems
+        dest: "{{ stack_path }}/grafana-conf/custom.ini"
+        owner: Samuel
+        group: Samuel
+        mode: '0644'
+    
+    - name: Copiar prometheus.yml al servidor - Copy prometheus.yml to the server
+      copy:
+        src: prometheus/prometheus.yml
+        dest: "{{ stack_path }}/prometheus/prometheus.yml"
+        owner: Samuel
+        group: Samuel
+        mode: '0644'
+
+    - name: Ejecutar docker-compose - Run docker-compose
+      shell: docker compose up -d
+      args:
+        chdir: "{{ stack_path }}"
