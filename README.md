@@ -28,6 +28,8 @@ Este proyecto fue pensado para usar **Jellyfin** y poder montar una infrestructu
   - Docker[🖥️](./Docker)
 
   - Jellyfin🐬
+
+  - Grafana - Prometheus📊⚡
 ----------------------------------------
 
 ### Carpetas y plantillas para que puedas hacer tu propio servidor. / *Folders and templates so you can make your own server.*[📁](./Example-plantillas)
