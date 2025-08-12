@@ -1,3 +1,11 @@
+<p align="center">
+  <a href="readme.en.md">
+    <img src="https://img.shields.io/badge/⏻-Switch%20to%20English-red?style=for-the-badge">
+  </a>
+</p>
+
+
+
 # En este apartado, quiero mostrar el uso de unos scrips y archivos .yml para crear una rotacion en tiempo real del secreto de Ansible/In this section, I want to show the use of some scripts and .yml files to create a real-time rotation of the Ansible secret*
 
 1. purgar-eliminacion-**purge-elimination**
