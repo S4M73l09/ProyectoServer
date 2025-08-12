@@ -1,12 +1,14 @@
+<p align="center">
+  <a href="README.en.md">
+    <img src="https://img.shields.io/badge/⏻-Switch%20to%20English-red?style=for-the-badge">
+  </a>
+</p>
+
 # Wireguard🌐
 
 Para una mejora de seguridad tanto para futuros proyectos como para aprender mas el uso y la importancia de las VPNs, he querido usar Wireguard para mejorar la seguridad del SSH y como modo de proteccion.
 
-*To improve security both for future projects and to learn more about the use and importance of VPNs, I wanted to use Wireguard to improve SSH security and as a protection mode*
-
 ### En esta carpeta, se guarda los scripts usados para la automatizacion de wireguard
-
-### *In this folder, the scripts used for Wireguard Automation are saved*
 
 -----------------------------------
 
@@ -15,8 +17,7 @@ Para una mejora de seguridad tanto para futuros proyectos como para aprender mas
    ![image](https://github.com/user-attachments/assets/861db19c-9ce3-43b5-964c-ecfb48306d41)
 
   Este script nos permite tener **automatizado** para que escuche de manera automatica y no surga problemas con el **firewall** de Linux.
-  
-  *This script allows us to have it **automated** so that it listens automatically and no problems arise with the Linux **firewall**.*
+
 
  - ## wireguard-firewall.sh
 
@@ -24,9 +25,6 @@ Para una mejora de seguridad tanto para futuros proyectos como para aprender mas
 
   Este Script se encarga de permitir el **SSH** y hacer que el tunel escuche la entrada de SSH, haciendo posible
   que se tenga que necesitar dicha **VPN** para el protocolo.
-  
-  *This Script is responsible for allowing **SSH** and making the tunnel listen to SSH input, making it possible
-  that said **VPN** must be needed for the protocol.*
 
  - ## wireguard-firewall-clean.sh
 
@@ -34,21 +32,15 @@ Para una mejora de seguridad tanto para futuros proyectos como para aprender mas
 
   Este script es responsable de limpiar la configuracion del **tunnel** cuando este cerrado o apagado.
     
-  *This script is responsible for clean the latest configuration when the **tunnel** is down.*
 
- - ## Configuracion cliente Windows/**Windows client configuration**
+ - ## Configuracion cliente Windows
 
   En esta captura se muestra la configuracion planteada en el cliente de **windows** para poder conectarme a dicha maquina, esta configuracion se puede usar tambien para conectar dicha VPN con algun dispositivo movil o cualquier otro dispositivo.
-
-  *This screenshot shows the configuration proposed in the **Windows** client to be able to connect to said machine. This configuration can also be used to connect said VPN with mobile device or any other device*
 
   ![Configuracion Windows cliente](https://github.com/user-attachments/assets/dc58971d-8551-4bd3-ab21-ca6e2804ae08)
 
 
  Con todo configurado y listo, la VPN ya sirve y podemos usarla para que el tunel SSH este bien defendido.
-
- *With everything configured and ready, the **VPN** is now useful and we can use it so that the SSH tunnel is well defended*
  
  Esta seccion de la **VPN** de wireguard ya esta completa.
 
- *This section the Wireguard **VPN** is done.*
