@@ -1,3 +1,10 @@
+<p align="center">
+  <a href="Readme.en.md">
+    <img src="https://img.shields.io/badge/⏻-Switch%20to%20English-red?style=for-the-badge">
+  </a>
+</p>
+ 
+ 
  # Ansible🅰
 
 #### Ansible es una herramienta especialmente poderosa en el ambito DevOps ya que nos permite automatizar el despliegue de infraestructura tanto de maquinas en general como despliegue de servicios de una maquina en particular, en este proyecto se usa Ansible para una maquina en particular la cual nos servira para ahorrar mucho el trabajo una vez lo tengamos configurado.
