@@ -6,7 +6,7 @@
 
 
 
-<h2 align="center">Proyecto propio: Servidor Jellyfin usando diferentes tecnologias/*Jellyfin server using different technologies* 🖥️</h2>
+<h2 align="center">Proyecto propio: Servidor Jellyfin usando diferentes tecnologias🖥️</h2>
 
 Este proyecto fue pensado para usar **Jellyfin** y poder montar una infrestructura tocando todo lo necesario de un perfil **Devops** como el mio, como estaba cansado de tener mis peliculas y series en mi disco duro decidi montar usando mis conocimientos y de paso tocando todo tipo de **tecnologias** y implementaciones un servidor en la nube usando **Azure** como herramienta principal, para asi yo poder ver series y peliculas cuando quiera y donde quiera.
 
