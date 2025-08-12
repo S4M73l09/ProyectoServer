@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="readme.en.md">
+    <img src="https://img.shields.io/badge/⏻-Switch%20to%20English-red?style=for-the-badge">
+  </a>
+</p>
+
 # ¿Que hace este comando? *What does this command?*
 ------------------------------------------------
 
