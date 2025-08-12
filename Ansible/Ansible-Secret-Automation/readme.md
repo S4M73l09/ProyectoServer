@@ -29,13 +29,13 @@ He separado cada script en tres diferentes carpetas para asi poder explicar de m
 
 - **This file is responsible for giving the necessary variables to the SP-rotator that is responsible for transferring secrets to Ansible, while at the same time it helps us to better improve security since it allows us not to put important variables in our Scripts. For security reasons, here in Git Hub the variables used are censored and other random ones were placed this is just an example of such a file.**
 
-  -----------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 
 
 
   
----
+
 
 ### **¿Cómo se verá?/*How will it look?***
 ¡Así! 👇 *so 👇*
