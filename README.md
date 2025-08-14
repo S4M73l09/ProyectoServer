@@ -198,7 +198,7 @@ y la alerta esta creada.
 
 ## Final
 
-Con eso el proyecto estarai finalizado, automatizado, escalable y totalmente monitorizado. Me sirvio para poder aprender de manera mas correcta las futuras tecnologias a la hora de crear una infraestructura profesional, por supuesto esto es solo un proyecto de ejemplo escogido para mejorar la visualizacion de mis habilidades tecnicas, si deseas ver de mejor manera una documentacion mas tecnica y avanzada pero tambien mas larga, te dejo el enlace de descargar de la documentacion tecnica del proyecto: aqui[👉](https://docs.google.com/document/d/1qoJ3GWvP3NGs3c-weBnPwfEgy2D1yNvPTHCBq6mClAE/export?format=pdf)
+Con eso el proyecto estarai finalizado, automatizado, escalable y totalmente monitorizado. Me sirvio para poder aprender de manera mas correcta las futuras tecnologias a la hora de crear una infraestructura profesional, por supuesto esto es solo un proyecto de ejemplo escogido para mejorar la visualizacion de mis habilidades tecnicas, si deseas ver de mejor manera una documentacion mas tecnica y avanzada pero tambien mas larga, te dejo el enlace de descargar de la documentacion tecnica del proyecto: aqui[👉Hola](https://docs.google.com/document/d/1qoJ3GWvP3NGs3c-weBnPwfEgy2D1yNvPTHCBq6mClAE/export?format=pdf)
 
 
 
