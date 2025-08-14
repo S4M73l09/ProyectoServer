@@ -145,7 +145,7 @@ Accedemos a Grafana tambien usando su puerto por defecto el cual esta puesto en 
 
 Ahora para añadir dicho dashboard, debemos dirigirnos al menu de la izquierda y darle al apartado de connections, y añadir Prometheus como data sources.
 
-Siguiente ya poodemos crear el dashboard.
+Siguiente ya podemos crear el dashboard.
 
 Configuramos dicho dashboard eligiendo el data sources de Prometheus
 
@@ -154,6 +154,7 @@ Configuramos dicho dashboard eligiendo el data sources de Prometheus
 Y despues de añadirlo, ya estaria dicho dashboard.
 
 <img width="897" height="501" alt="image" src="https://github.com/user-attachments/assets/2cd06e80-7872-4999-989c-2fadd4e54df5" />
+
 ------------------------------------------------------------------------------------------------------------
 
 ### **Creacion de alertas**
@@ -168,22 +169,13 @@ Para la creacion de la Alerta, debemos crearla en nuestro dashboard.
 
 Esta alerta se encargara de medir el uso de CPU, cuando este sobrepase el 85%, Grafana alertara usando el correo que añadimos, se puede usar por supuesto en el docker-compose la opcion para que Grafana tenga servicio **SMTP**. Añdiendo esta linea al grafana.ini
 
-[smtp]
-enabled = true
-host = smtp.gmail.com:587
-user = TU_CORREO@gmail.com
-password = TU_CONTRASEÑA_DE_APP
-skip_verify = true
-from_address = TU_CORREO@gmail.com
-from_name = Grafana
+<img width="289" height="163" alt="image" src="https://github.com/user-attachments/assets/c731f0c9-b424-48a3-8188-d2eb38970247" />
+
 
 o si usamos Ansible, montarlo como volumen como se hizo con custom.ini por ejemplo.
 
-ejemplo:
-grafana:
-  image: grafana/grafana:latest
-  volumes:
-    - ./grafana.ini:/etc/grafana/grafana.ini
+<img width="264" height="103" alt="image" src="https://github.com/user-attachments/assets/2c1baff9-c440-4df8-84d3-d5d181e82001" />
+
 
 
 igualmente con esto seria mas que suficiente.
