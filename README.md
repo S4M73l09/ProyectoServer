@@ -142,7 +142,63 @@ Accedemos a Grafana tambien usando su puerto por defecto el cual esta puesto en 
 
 <img width="1199" height="569" alt="image" src="https://github.com/user-attachments/assets/0f77117c-050e-4d12-94d3-deb9379cdda9" />
 
+
 Ahora para añadir dicho dashboard, debemos dirigirnos al menu de la izquierda y darle al apartado de connections, y añadir Prometheus como data sources.
+
+Siguiente ya poodemos crear el dashboard.
+
+Configuramos dicho dashboard eligiendo el data sources de Prometheus
+
+<img width="260" height="339" alt="image" src="https://github.com/user-attachments/assets/d9bb0a5a-79f8-43e5-8eba-ba7291a4d63f" /> <img width="241" height="391" alt="image" src="https://github.com/user-attachments/assets/f5d89932-85f1-496a-8bb4-3758fe31bacf" /> <img width="301" height="362" alt="image" src="https://github.com/user-attachments/assets/25388ad7-cafd-4328-a18e-b03a98a5dc27" />
+
+Y despues de añadirlo, ya estaria dicho dashboard.
+
+<img width="897" height="501" alt="image" src="https://github.com/user-attachments/assets/2cd06e80-7872-4999-989c-2fadd4e54df5" />
+------------------------------------------------------------------------------------------------------------
+
+### **Creacion de alertas**
+
+Para la creacion de la Alerta, debemos crearla en nuestro dashboard.
+
+<img width="895" height="499" alt="image" src="https://github.com/user-attachments/assets/72a3b419-1c57-4f74-bcf5-15c4cf1888f9" />
+
+<img width="710" height="361" alt="image" src="https://github.com/user-attachments/assets/57468f59-5381-416e-ab77-07ee0172affa" />
+
+<img width="885" height="746" alt="image" src="https://github.com/user-attachments/assets/0a11fb7d-a715-4610-af83-a40108263e46" />
+
+Esta alerta se encargara de medir el uso de CPU, cuando este sobrepase el 85%, Grafana alertara usando el correo que añadimos, se puede usar por supuesto en el docker-compose la opcion para que Grafana tenga servicio **SMTP**. Añdiendo esta linea al grafana.ini
+
+[smtp]
+enabled = true
+host = smtp.gmail.com:587
+user = TU_CORREO@gmail.com
+password = TU_CONTRASEÑA_DE_APP
+skip_verify = true
+from_address = TU_CORREO@gmail.com
+from_name = Grafana
+
+o si usamos Ansible, montarlo como volumen como se hizo con custom.ini por ejemplo.
+
+ejemplo:
+grafana:
+  image: grafana/grafana:latest
+  volumes:
+    - ./grafana.ini:/etc/grafana/grafana.ini
+
+
+igualmente con esto seria mas que suficiente.
+
+<img width="868" height="717" alt="image" src="https://github.com/user-attachments/assets/a7213b51-29a4-4404-b8c4-ac267b190d9c" />
+
+y la alerta esta creada.
+
+<img width="892" height="204" alt="image" src="https://github.com/user-attachments/assets/3c668408-5c5e-4542-a73b-345ceb8100e7" />
+
+----------------------------------------------------------------------------------
+
+## Final
+
+Con eso el proyecto estarai finalizado, automatizado, escalable y totalmente monitorizado. Me sirvio para poder aprender de manera mas correcta las futuras tecnologias a la hora de crear una infraestructura profesional, por supuesto esto es solo un proyecto de ejemplo escogido para mejorar la visualizacion de mis habilidades tecnicas, si deseas ver de mejor manera una documentacion mas tecnica y avanzada pero tambien mas larga, te dejo el enlace de descargar de la documentacion tecnica del proyecto: aqui[👉](https://docs.google.com/document/d/1qoJ3GWvP3NGs3c-weBnPwfEgy2D1yNvPTHCBq6mClAE/export?format=pdf)
 
 
 
